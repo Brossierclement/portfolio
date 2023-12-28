@@ -1,0 +1,19 @@
+.main {
+  margin: 0 auto;
+  max-width: 768px;
+  .me {
+    position: relative;
+    img {
+      border-radius: 50%;
+      display: block;
+      height: 90px;
+      position: absolute;
+      transform: translate(25px, -50%);
+    }
+    a {
+      float: right;
+      margin-right: 25px;
+      margin-top: 5px;
+    }
+  }
+}
