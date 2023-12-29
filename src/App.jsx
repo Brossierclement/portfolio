@@ -1,16 +1,15 @@
 import "./App.scss";
-import Header from "./assets/components/header/header";
-import logo from "../src/assets/images/eye-solid.svg";
-import Banner from "./assets/components/banner/banner";
-import banner from "../src/assets/images/melancholy.jpg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/home/home";
 
 function App() {
   return (
     <>
-      <Header logo={logo} />
-      <Banner img={banner} />
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

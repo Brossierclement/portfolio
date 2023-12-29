@@ -1,19 +1,16 @@
 .main {
   margin: 0 auto;
-  max-width: 768px;
-  .me {
-    position: relative;
-    img {
-      border-radius: 50%;
-      display: block;
-      height: 90px;
-      position: absolute;
-      transform: translate(25px, -50%);
+  max-width: 596.5px;
+  .introduce {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    h1,
+    p {
+      margin: 0;
     }
-    a {
-      float: right;
-      margin-right: 25px;
-      margin-top: 5px;
+    p {
+      font-size: 14px;
     }
   }
 }
