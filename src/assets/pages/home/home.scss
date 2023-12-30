@@ -1,16 +1,54 @@
+@import "../../colors.scss";
+
 .main {
   margin: 0 auto;
   max-width: 596.5px;
+  padding: 0 1rem;
   .introduce {
     align-items: start;
     display: flex;
     flex-direction: column;
+    gap: 5px;
     h1,
     p {
       margin: 0;
     }
-    p {
+    .quote,
+    .activities {
       font-size: 14px;
+    }
+    .quote {
+      color: $secondary-text-links;
+      font-style: italic;
+    }
+  }
+  .about {
+    text-align: start;
+    p {
+      span {
+        color: $interactive-components;
+        text-transform: uppercase;
+      }
+      a {
+        position: relative;
+        color: #7451eb;
+        text-decoration: none;
+        transition: all 0.3s;
+        &::after {
+          background: #7451eb;
+          bottom: -1px;
+          content: "";
+          display: inline-block;
+          height: 1px;
+          left: 0;
+          position: absolute;
+          transition: 0.2s ease-in;
+          width: 0;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
     }
   }
 }
