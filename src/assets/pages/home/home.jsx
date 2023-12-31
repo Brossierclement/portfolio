@@ -1,9 +1,18 @@
 import "./home.scss";
+import { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
 
 function Home() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <>
       <Header logo={eye} background={bg} />
@@ -17,7 +26,7 @@ function Home() {
         </section>
         <nav className="navigation"></nav>
         <section className="about">
-          <h1>About</h1>
+          <h1># About</h1>
           <p>
             "I am a young French web developer specializing in front-end
             development. I acquired skills in <span>JavaScript</span> and{" "}
@@ -28,7 +37,14 @@ function Home() {
           </p>
         </section>
         <section className="projects">
-          <h1>Projects</h1>
+          <h1># Projects</h1>
+          {data
+            ? data.map((item) => (
+                <div key={item.id}>
+                  <p>{item.name}</p>
+                </div>
+              ))
+            : "Chargement"}
         </section>
       </main>
     </>
