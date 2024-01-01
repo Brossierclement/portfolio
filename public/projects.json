@@ -1,14 +1,20 @@
 [
     {
         "id": 1,
-        "name": "Argent Bank"
+        "name": "Argent Bank",
+        "url": "/project1",
+        "text": "Project n°1"
     },
     {
         "id": 2,
-        "name": "Kasa"
+        "name": "Kasa",
+        "url": "/project2",
+        "text": "Project n°2"
     },
     {
         "id": 3,
-        "name": "Sophie Bluel"
+        "name": "Sophie Bluel",
+        "url": "/project3",
+        "text": "Project n°3"
     }
 ]

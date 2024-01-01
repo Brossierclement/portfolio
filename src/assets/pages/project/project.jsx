@@ -1,9 +1,9 @@
 import "../project/project.scss";
 
-function Project() {
+function Project({ data }) {
   return (
     <div className="project">
-      <h1>PROJECT</h1>
+      <h1>{data.name}</h1>
     </div>
   );
 }

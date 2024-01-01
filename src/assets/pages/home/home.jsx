@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [data, setData] = useState(null);
@@ -40,9 +41,9 @@ function Home() {
           <h1># Projects</h1>
           {data
             ? data.map((item) => (
-                <div key={item.id}>
-                  <p>{item.name}</p>
-                </div>
+                <Link key={item.id} to={item.url}>
+                  {item.name}
+                </Link>
               ))
             : "Chargement"}
         </section>
