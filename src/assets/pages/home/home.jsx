@@ -1,9 +1,11 @@
 import "./home.scss";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
 import { Link } from "react-router-dom";
+
+const infosContext = createContext();
 
 function Home() {
   const [data, setData] = useState(null);
@@ -14,6 +16,7 @@ function Home() {
       .then((json) => setData(json))
       .catch((error) => console.error(error));
   }, []);
+
   return (
     <>
       <Header logo={eye} background={bg} />
@@ -41,7 +44,7 @@ function Home() {
           <h1># Projects</h1>
           {data
             ? data.map((item) => (
-                <Link key={item.id} to={item.url}>
+                <Link key={item.id} to={`/project/${item.id}`}>
                   {item.name}
                 </Link>
               ))

@@ -1,11 +1,7 @@
 import "../project/project.scss";
 
-function Project({ data }) {
-  return (
-    <div className="project">
-      <h1>{data.name}</h1>
-    </div>
-  );
+function Project() {
+  return <div className="project"></div>;
 }
 
 export default Project;
