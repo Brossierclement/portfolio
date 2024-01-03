@@ -1,11 +1,9 @@
 import "./home.scss";
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
 import { Link } from "react-router-dom";
-
-const infosContext = createContext();
 
 function Home() {
   const [data, setData] = useState(null);
