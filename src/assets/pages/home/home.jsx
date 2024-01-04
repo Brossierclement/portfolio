@@ -4,6 +4,7 @@ import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
 import { Link } from "react-router-dom";
+import Footer from "../../components/footer/footer";
 
 function Home() {
   const [data, setData] = useState(null);
@@ -48,6 +49,7 @@ function Home() {
               ))
             : "Chargement"}
         </section>
+        <Footer />
       </main>
     </>
   );
