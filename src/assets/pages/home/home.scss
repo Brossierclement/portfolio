@@ -53,5 +53,12 @@
   }
   .projects {
     text-align: start;
+    .links {
+      display: flex;
+      gap: 15px;
+      a {
+        color: $high-contrast-text;
+      }
+    }
   }
 }

@@ -41,13 +41,15 @@ function Home() {
         </section>
         <section className="projects">
           <h1># Projects</h1>
-          {data
-            ? data.map((item) => (
-                <Link key={item.id} to={`/project/${item.id}`}>
-                  {item.name}
-                </Link>
-              ))
-            : "Chargement"}
+          <nav className="links">
+            {data
+              ? data.map((item) => (
+                  <Link key={item.id} to={`/project/${item.id}`}>
+                    {item.name}
+                  </Link>
+                ))
+              : "Chargement"}
+          </nav>
         </section>
         <Footer />
       </main>
