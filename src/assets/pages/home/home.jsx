@@ -1,21 +1,14 @@
 import "./home.scss";
-import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 import Header from "../../components/header/header";
 import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/footer";
+import { DataContext } from "../../../App";
 
 function Home() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch("/projects.json")
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error(error));
-  }, []);
-
+  const data = useContext(DataContext);
   return (
     <>
       <Header logo={eye} background={bg} />
