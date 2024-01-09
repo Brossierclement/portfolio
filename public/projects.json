@@ -3,18 +3,21 @@
         "id": 1,
         "name": "Argent Bank",
         "url": "/project1",
-        "text": "Project n°1"
+        "text": "Project n°1",
+        "banner": "/img/bank-tree.jpg"
     },
     {
         "id": 2,
         "name": "Kasa",
         "url": "/project2",
-        "text": "Project n°2"
+        "text": "Project n°2",
+        "banner": "/img/zen-flat.jpg"
     },
     {
         "id": 3,
         "name": "Sophie Bluel",
         "url": "/project3",
-        "text": "Project n°3"
+        "text": "Project n°3",
+        "banner": "/img/sophie-bluel.jpg"
     }
 ]

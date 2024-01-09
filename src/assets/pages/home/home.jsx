@@ -1,8 +1,8 @@
 import "./home.scss";
 import { useContext } from "react";
 import Header from "../../components/header/header";
-import eye from "../../images/eye-solid.svg";
 import bg from "../../images/melancholy.jpg";
+import arrow from "../../images/arrow-right-outline.svg";
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import { DataContext } from "../../../App";
@@ -11,7 +11,7 @@ function Home() {
   const data = useContext(DataContext);
   return (
     <>
-      <Header logo={eye} background={bg} />
+      <Header background={bg} />
       <main className="main">
         <section className="introduce">
           <h1>Clément Brossier</h1>
@@ -37,8 +37,13 @@ function Home() {
           <nav className="links">
             {data
               ? data.map((item) => (
-                  <Link key={item.id} to={`/project/${item.id}`}>
+                  <Link
+                    className="link"
+                    key={item.id}
+                    to={`/project/${item.id}`}
+                  >
                     {item.name}
+                    <div className="triangle"></div>
                   </Link>
                 ))
               : "Chargement"}

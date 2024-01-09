@@ -55,9 +55,23 @@
     text-align: start;
     .links {
       display: flex;
+      flex-direction: column;
       gap: 15px;
-      a {
+      .link {
+        border: 1px solid $secondary-text-links;
         color: $high-contrast-text;
+        line-height: 1;
+        padding: 5px 10px;
+        text-decoration: none;
+        .triangle {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 60px solid #555555;
+          border-right: 0;
+        }
       }
     }
   }

@@ -2,6 +2,7 @@ import "../project/project.scss";
 import { DataContext } from "../../../App";
 import { useContext } from "react";
 import { useParams } from "react-router";
+import Header from "../../components/header/header";
 import Error from "../error/error";
 
 function Project() {
@@ -20,13 +21,16 @@ function Project() {
   }
 
   return (
-    <div>
+    <>
       {data ? (
-        <div className="project">{result.name}</div>
+        <>
+          <Header background={result.banner} />
+          <main className="project"></main>
+        </>
       ) : (
         <p>Chargement...</p>
       )}
-    </div>
+    </>
   );
 }
 

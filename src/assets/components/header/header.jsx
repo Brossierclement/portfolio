@@ -1,10 +1,11 @@
 import "../header/header.scss";
+import eye from "../../images/eye-solid.svg";
 
-function Header({ logo, background }) {
+function Header({ background }) {
   return (
     <header className="header">
       <div className="topbar">
-        <img src={logo} alt="Logo" />
+        <img src={eye} alt="Logo" />
         <a href="#">brossier.clement@proton.me</a>
       </div>
 
