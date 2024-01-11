@@ -1,23 +1,52 @@
 [
     {
         "id": 1,
-        "name": "Argent Bank",
-        "url": "/project1",
-        "text": "Project n°1",
-        "banner": "/img/bank-tree.jpg"
+        "projects": [
+            {
+                "id": 1,
+                "name": "Argent Bank",
+                "url": "/project1",
+                "text": "Project n°1",
+                "banner": "/img/bank-tree.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Kasa",
+                "url": "/project2",
+                "text": "Project n°2",
+                "banner": "/img/zen-flat.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Sophie Bluel",
+                "url": "/project3",
+                "text": "Project n°3",
+                "banner": "/img/sophie-bluel.jpg"
+            }
+        ]
     },
     {
         "id": 2,
-        "name": "Kasa",
-        "url": "/project2",
-        "text": "Project n°2",
-        "banner": "/img/zen-flat.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Sophie Bluel",
-        "url": "/project3",
-        "text": "Project n°3",
-        "banner": "/img/sophie-bluel.jpg"
+        "skills": [
+            {
+                "id": 1,
+                "logo": "/img/person-outline.svg",
+                "title": "Intégrateur Web :",
+                "description": "C'est avec plaisir que je m'occupe de l'intégration web, en utilisant les langages HTML, CSS et React. Mon objectif est de créer des interfaces simples et réactives pour offrir une expérience utilisateur fluide sur différents appareils"
+            },
+            {
+                "id": 2,
+                "logo": "/img/code-linear.svg",
+                "title": "Langages :",
+                "language": ["/img/file-type-js-official.svg", "/img/file-type-reactjs.svg"]
+            },
+            {
+                "id": 3,
+                "logo": "/img/toolbox-outline.svg",
+                "title": "Bonus :",
+                "description": "Je maîtrise également des logiciels tels que Photoshop et DavinciResolve."
+        
+            }
+        ]
     }
 ]

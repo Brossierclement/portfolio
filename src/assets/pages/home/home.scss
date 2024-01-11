@@ -22,6 +22,9 @@
       font-style: italic;
     }
   }
+  .more {
+    display: flex;
+  }
   .about {
     text-align: start;
     p {
@@ -31,11 +34,11 @@
       }
       a {
         position: relative;
-        color: #7451eb;
+        color: #9e89e4;
         text-decoration: none;
         transition: all 0.3s;
         &::after {
-          background: #7451eb;
+          background: #9e89e4;
           bottom: -1px;
           content: "";
           display: inline-block;
@@ -58,21 +61,32 @@
       flex-direction: column;
       gap: 15px;
       .link {
+        align-items: center;
         border: 1px solid $secondary-text-links;
+        border-radius: 2px;
         color: $high-contrast-text;
+        display: flex;
         line-height: 1;
+        justify-content: space-between;
         padding: 5px 10px;
         text-decoration: none;
-        .triangle {
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-top: 50px solid transparent;
-          border-bottom: 50px solid transparent;
-          border-left: 60px solid #555555;
-          border-right: 0;
+        transition: all 0.2s ease-in;
+        &:hover {
+          border: 1px solid $interactive-components;
+          .arrow {
+            transform: translateX(5px);
+          }
+        }
+        p {
+          margin: 0;
+        }
+        .arrow {
+          transition: all 0.2s ease-in;
         }
       }
     }
+  }
+  .skills {
+    text-align: start;
   }
 }

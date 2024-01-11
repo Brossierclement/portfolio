@@ -1,13 +1,9 @@
 import "../button/button.scss";
 
-function Button({ name, background, color }) {
+function Button({ name }) {
   return (
-    <a
-      className="btn"
-      href="#"
-      style={{ background: `${background}`, color: `${color}` }}
-    >
-      {name}
+    <a className="btn" href="#">
+      <p>{name}</p>
     </a>
   );
 }

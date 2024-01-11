@@ -13,7 +13,7 @@ function Project() {
   if (!data) {
     return <p>Chargement...</p>;
   } else {
-    const project = data;
+    const project = data[0].projects;
     result = project.find((item) => item.id == id);
     if (!result) {
       return <Error />;
