@@ -1,8 +1,8 @@
 import "../button/button.scss";
 
-function Button({ name }) {
+function Button({ name, link, className }) {
   return (
-    <a className="btn" href="#">
+    <a className={`btn ${className}`} href={link} download>
       <p>{name}</p>
     </a>
   );

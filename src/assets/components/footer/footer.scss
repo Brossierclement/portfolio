@@ -1,0 +1,43 @@
+@import "../../colors.scss";
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 596.5px;
+  padding: 32px 0;
+  p {
+    color: $secondary-text-links;
+    font-size: 11px;
+    margin: 0;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    .socials-link {
+      align-items: center;
+      border-radius: 10px;
+      color: $high-contrast-text;
+      display: flex;
+      height: 20px;
+      justify-content: center;
+      padding: 10px;
+      text-decoration: none;
+      transition: 0.2s ease-in;
+      width: 20px;
+      &:hover {
+        background: $secondary-text-links;
+        i {
+          color: $background;
+        }
+      }
+      i {
+        &::before {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

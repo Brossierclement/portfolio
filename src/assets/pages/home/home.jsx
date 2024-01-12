@@ -22,7 +22,10 @@ function Home() {
           </p>
           <p className="activities">Web Integrator Junior - Content Creator</p>
           <div className="more">
-            <Button name={"curriculum vitae"} />
+            <Button
+              name={"curriculum vitae"}
+              link={"/img/cv-clement-brossier.pdf"}
+            />
           </div>
         </section>
         <section className="about">
@@ -64,8 +67,8 @@ function Home() {
             <p>Chargement...</p>
           )}
         </section>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

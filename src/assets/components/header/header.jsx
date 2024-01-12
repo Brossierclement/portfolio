@@ -1,12 +1,20 @@
 import "../header/header.scss";
 import eye from "../../images/eye-solid.svg";
+import Button from "../button/button";
+import { Link } from "react-router-dom";
 
 function Header({ background }) {
   return (
     <header className="header">
       <div className="topbar">
-        <img src={eye} alt="Logo" />
-        <a href="#">brossier.clement@proton.me</a>
+        <Link className="return" to={"/"}>
+          <img src={eye} alt="Logo" />
+        </Link>
+        <Button
+          className={"email"}
+          name={"brossier.clement@proton.me"}
+          link={"mailto:brossier.clement@proton.me"}
+        />
       </div>
 
       <div className="banner">

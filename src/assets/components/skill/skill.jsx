@@ -9,7 +9,7 @@ function Skill({ data }) {
             <img src={data.logo} alt="logo" />
             <h2>{data.title}</h2>
           </section>
-          <div>
+          <div className="skill-img">
             {data ? (
               data.language?.map((item, i) => (
                 <img key={i} src={item} alt="logo" />
@@ -18,7 +18,7 @@ function Skill({ data }) {
               <p>Chargement...</p>
             )}
           </div>
-          <div>{data.description}</div>
+          <p>{data.description}</p>
         </div>
       ) : (
         <p>Chargement...</p>

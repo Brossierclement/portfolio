@@ -1,7 +1,7 @@
 @import "../../colors.scss";
 
 .main {
-  margin: 0 auto;
+  margin: 15px auto;
   max-width: 596.5px;
   padding: 0 1rem;
   .introduce {
@@ -87,6 +87,8 @@
     }
   }
   .skills {
+    display: flex;
+    flex-direction: column;
     text-align: start;
   }
 }
