@@ -7,21 +7,57 @@
                 "name": "Argent Bank",
                 "url": "/project1",
                 "text": "Project n°1",
-                "banner": "/img/bank-tree.jpg"
+                "banner": "/img/bank-tree.jpg",
+                "examples": [
+                    "/img/ab1.jpg",
+                    "/img/ab2.jpg",
+                    "/img/ab3.jpg"],
+                "about": {
+                    "titleOne": "Accédez simplement à vos transactions, depuis la plateforme ArgentBank",
+                    "realization": "En tant qu'intégrateur web, j'ai joué un rôle clé dans le développement de l'application Argent Bank en React. Mon travail a inclus la création d'une authentification sécurisée, la personnalisation des noms d'utilisateurs, et la mise en place d'un système de gestion des transactions, permettant aux utilisateurs d'accéder et de modifier facilement leur historique financier. Cette expérience a renforcé ma maîtrise de React et ma permis un premier contact avec Redux.",
+                    "titleTwo": "Fonctionnalités",
+                    "features": ["- Se connecter", "- Changer son nom d'utilisateur", "- Accéder aux transactions", "- Modifier les transactions"],
+                    "titleThree": "Compétences",
+                    "skills": ["Html", "Css", "React", "Redux"]
+                }
             },
             {
                 "id": 2,
                 "name": "Kasa",
                 "url": "/project2",
                 "text": "Project n°2",
-                "banner": "/img/zen-flat.jpg"
+                "banner": "/img/zen-flat.jpg",
+                "examples": [
+                    "/img/k1.jpg",
+                    "/img/k2.jpg",
+                    "/img/k3.jpg"],
+                "about": {
+                    "titleOne": "Trouver une location n'a jamais été aussi simple",
+                    "realization": "Mon premier projet en React, Kasa, est une application de location immobilière offrant aux utilisateurs une interface intuitive pour explorer des locations. J'ai créé une expérience utilisateur fluide permettant d'accéder facilement aux informations détaillées, notamment la navigation dans les photos et l'utilisation des fonctionnalités de collapsible pour des informations supplémentaires. Mon implication dans Kasa a été cruciale pour acquérir des compétences solides en développement React tout en contribuant à la création d'une application conviviale pour la recherche de locations immobilières.",
+                    "titleTwo": "Fonctionnalités",
+                    "features": ["- Accéder aux locations", "- Naviguer dans les photos", "- Agir sur les collapse"],
+                    "titleThree": "Compétences",
+                    "skills": ["Html", "Css", "React"]
+                }
             },
             {
                 "id": 3,
                 "name": "Sophie Bluel",
                 "url": "/project3",
                 "text": "Project n°3",
-                "banner": "/img/sophie-bluel.jpg"
+                "banner": "/img/sophie-bluel.jpg",
+                "examples": [
+                    "/img/sb1.jpg",
+                    "/img/sb2.jpg",
+                    "/img/sb3.jpg"],
+                "about": {
+                    "titleOne": "Partager ses clichés facilement et en un instant",
+                    "realization": "Mon premier projet Javascript, dédié à Madame Sophie Bluel, est un site de photographie permettant aux visiteurs de visualiser et filtrer les photos par catégories. Madame Sophie peut se connecter pour gérer son portfolio en ajoutant ou supprimant des photos via une modale conviviale. Ce projet a été une occasion stimulante de mettre en pratique mes compétences naissantes en Javascript, en créant une solution fonctionnelle et esthétique pour répondre aux besoins spécifiques de Madame Sophie Bluel en tant que photographe.",
+                    "titleTwo": "Fonctionnalités",
+                    "features": ["- Trier les photos par catégories", "- Se connecter", "- Accéder à la modale pour gérer les photos", "- Ajouter et supprimer d'images"],
+                    "titleThree": "Compétences",
+                    "skills": ["Html", "Css", "Js"]
+                }
             }
         ]
     },

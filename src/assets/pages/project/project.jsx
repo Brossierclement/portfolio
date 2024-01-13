@@ -25,7 +25,17 @@ function Project() {
       {data ? (
         <>
           <Header background={result.banner} />
-          <main className="project"></main>
+          <main className="project">
+            <div className="examples">
+              {data ? (
+                result.examples.map((item, i) => (
+                  <img key={i} src={item} alt={`img ${i}`} />
+                ))
+              ) : (
+                <p>Chargement...</p>
+              )}
+            </div>
+          </main>
         </>
       ) : (
         <p>Chargement...</p>
