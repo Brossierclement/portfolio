@@ -1,12 +1,88 @@
+@import "../../colors.scss";
 .project {
+  margin: 75px auto;
+  max-width: 596.5px;
+  padding: 0 1rem;
+  text-align: start;
+  h1 {
+    font-size: 1.5rem;
+  }
+  p,
+  li {
+    color: $secondary-text-links;
+  }
+  .project-introduce {
+    margin-bottom: 15px;
+    .title {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      gap: 15px;
+      justify-content: start;
+      position: relative;
+      h1 {
+        background-color: rgba($background, 0.75);
+        bottom: 15px;
+        border-radius: 0 0 15px 0;
+        line-height: 1;
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        left: 75px;
+      }
+      .pins {
+        border-radius: 15px;
+        height: 150px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    .about {
+      flex: 1;
+    }
+  }
   .examples {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 596.5px;
+    gap: 15px;
     img {
-      width: 60%;
+      border: 1px solid transparent;
+      border-radius: 2.5px;
+      transition: 0.2s ease-in;
+      width: 100%;
+      &:hover {
+        border: 1px solid $interactive-components;
+        transform: scale(1.5);
+      }
+    }
+  }
+  .description {
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
+  .tags {
+    display: flex;
+    gap: 10px;
+    .tag {
+      background: grey;
+      border-radius: 5px;
+      text-align: center;
+      width: 50px;
     }
   }
 }
+
+// @media (min-width: 1024px) {
+//   .project {
+//     .examples {
+//       img {
+//         width: 90%;
+//       }
+//     }
+//   }
+// }

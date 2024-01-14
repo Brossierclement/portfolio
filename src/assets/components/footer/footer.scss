@@ -1,11 +1,13 @@
 @import "../../colors.scss";
 .footer {
+  background-color: rgba($background, 0.7);
+  border-radius: 135px 135px 0 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 0 auto;
   max-width: 596.5px;
-  padding: 32px 0;
+  padding: 16px 0;
   p {
     color: $secondary-text-links;
     font-size: 11px;
@@ -26,7 +28,8 @@
       text-decoration: none;
       transition: 0.2s ease-in;
       width: 20px;
-      &:hover {
+      &:hover,
+      &:focus {
         background: $secondary-text-links;
         i {
           color: $background;

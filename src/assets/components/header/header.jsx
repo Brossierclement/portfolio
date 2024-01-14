@@ -3,7 +3,7 @@ import eye from "../../images/eye-solid.svg";
 import Button from "../button/button";
 import { Link } from "react-router-dom";
 
-function Header({ background }) {
+function Header({ background, styles }) {
   return (
     <header className="header">
       <div className="topbar">
@@ -17,7 +17,7 @@ function Header({ background }) {
         />
       </div>
 
-      <div className="banner">
+      <div style={styles} className="banner">
         <img src={background} alt="banner" />
       </div>
     </header>
