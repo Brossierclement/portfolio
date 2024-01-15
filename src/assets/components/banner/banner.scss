@@ -1,17 +1,15 @@
 @import "../../colors.scss";
 
 .banner {
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
+  max-width: 596.5px;
+  overflow: hidden;
+  width: 100%;
   img {
     display: block;
-    height: 175px;
+    height: 200px;
     object-fit: cover;
+    transform-origin: top center;
     width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .banner {
-    max-width: 768px;
   }
 }

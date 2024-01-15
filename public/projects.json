@@ -9,7 +9,7 @@
                 "text": "Project n°1",
                 "banner": "/img/bank-tree.jpg",
                 "link": "https://github.com/Brossierclement/projet-11-argentbank",
-                "title": "Application bancaire, pour gérer ses transactions",
+                "title": "Argent Bank, a React application with Redux.",
                 "goal": "Implémentez le front-end d'une application bancaire avec React",
                 "examples": [
                     "/img/ab1.jpg",
@@ -17,9 +17,9 @@
                     "/img/ab3.jpg"],
                 "about": {
                     "titleOne": "# Accédez simplement à vos transactions, depuis la plateforme ArgentBank :",
-                    "realization": "En tant qu'intégrateur web, j'ai joué un rôle clé dans le développement de l'application Argent Bank en React. Mon travail a inclus la création d'une authentification sécurisée, la personnalisation des noms d'utilisateurs, et la mise en place d'un système de gestion des transactions, permettant aux utilisateurs d'accéder et de modifier facilement leur historique financier. Cette expérience a renforcé ma maîtrise de React et ma permis un premier contact avec Redux.",
-                    "titleTwo": "# Fonctionnalités :",
-                    "features": ["- Se connecter", "- Changer son nom d'utilisateur", "- Accéder aux transactions", "- Modifier les transactions"],
+                    "realization": "As a web developer, I played a key role in the development of the Argent Bank application in React. My work included creating secure authentication, customizing user names, and implementing a transaction management system, enabling users to easily access and modify their financial history. This experience strengthened my proficiency in React and provided me with an initial exposure to Redux.",
+                    "titleTwo": "# features :",
+                    "features": ["- to login", "- change your username", "- access transactions", "- edit transactions"],
                     "titleThree": "# Compétences :",
                     "skills": ["Html", "Css", "React", "Redux"]
                 }

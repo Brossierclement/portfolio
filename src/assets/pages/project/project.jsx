@@ -3,6 +3,7 @@ import { DataContext } from "../../../App";
 import { useContext } from "react";
 import { useParams } from "react-router";
 import Header from "../../components/header/header";
+import Banner from "../../components/banner/banner";
 import Error from "../error/error";
 import Footer from "../../components/footer/footer";
 
@@ -28,26 +29,10 @@ function Project() {
           <Header styles={{ display: "none" }} />
           <main className="project">
             <section className="project-introduce">
-              <section className="title">
-                <img className="pins" src={result.banner} alt="ddd" />
-                <h1>{result.name}</h1>
-              </section>
-              <div className="about">
-                <p># Titled : {result.title}</p>
-                <p># Role : {result.goal}</p>
-              </div>
+              <h1>{result.title}</h1>
             </section>
-            <div className="examples">
-              {data ? (
-                result.examples.map((item, i) => (
-                  <img key={i} src={item} alt={`img ${i}`} />
-                ))
-              ) : (
-                <p>Chargement...</p>
-              )}
-            </div>
+            <Banner img={result.banner} />
             <section className="description">
-              <h1>{result.about.titleOne}</h1>
               <p>{result.about.realization}</p>
               <h1>{result.about.titleTwo}</h1>
               <ul>

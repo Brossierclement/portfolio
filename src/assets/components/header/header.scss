@@ -1,40 +1,18 @@
 @import "/src/assets/colors.scss";
 
 .header {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  .topbar {
-    align-items: center;
-    background-color: rgba($background, 0.7);
-    backdrop-filter: blur(2.5px);
-    display: flex;
-    height: 50px;
-    left: 0;
-    padding: 0 1rem;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    img {
-      color: $high-contrast-text;
-      display: block;
-      width: 2rem;
-    }
-    .email {
-      color: $secondary-text-links;
-      margin-left: auto;
-      text-decoration: none;
-    }
+  height: 50px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 596.5px;
+  padding: 0 8px;
+  img {
+    display: block;
+    width: 2rem;
   }
-  .banner {
-    margin: 0 auto;
-    max-width: 596.5px;
-    width: 100%;
-    img {
-      display: block;
-      height: 200px;
-      object-fit: cover;
-      width: 100%;
-    }
+  .email {
+    text-decoration: none;
   }
 }

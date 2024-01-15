@@ -1,18 +1,18 @@
 @import "../../colors.scss";
 .project {
-  margin: 75px auto;
+  margin: 0 auto 45px auto;
   max-width: 596.5px;
-  padding: 0 1rem;
   text-align: start;
   h1 {
     font-size: 1.5rem;
+    margin-top: 0;
   }
   p,
   li {
     color: $secondary-text-links;
   }
   .project-introduce {
-    margin-bottom: 15px;
+    margin: 0 8px 15px 8px;
     .title {
       align-items: center;
       display: flex;
@@ -41,23 +41,8 @@
       flex: 1;
     }
   }
-  .examples {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    img {
-      border: 1px solid transparent;
-      border-radius: 2.5px;
-      transition: 0.2s ease-in;
-      width: 100%;
-      &:hover {
-        border: 1px solid $interactive-components;
-        transform: scale(1.5);
-      }
-    }
-  }
   .description {
+    margin: 0 8px;
     ul {
       padding: 0;
       li {

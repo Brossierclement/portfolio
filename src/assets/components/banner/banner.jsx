@@ -1,8 +1,8 @@
 import "../banner/banner.scss";
 
-function Banner({ img }) {
+function Banner({ img, styles }) {
   return (
-    <div className="banner">
+    <div style={styles} className="banner">
       <img src={img} alt="banner" />
     </div>
   );
