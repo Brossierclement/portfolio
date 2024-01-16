@@ -1,30 +1,22 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/home/home";
-import Project from "./assets/pages/project/project";
-import { createContext } from "react";
-import { useState, useEffect } from "react";
-import Error from "./assets/pages/error/error";
-
+import { createContext, useEffect, useState } from "react";
 export const DataContext = createContext();
-
 function App() {
-  const [data, setData] = useState(null);
-
+  const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/projects.json")
+    fetch("/data.json")
       .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error(error));
+      .then((result) => setData(result))
+      .catch((error) => console.error("Error fetching data", error));
   }, []);
-
+  // console.log(data);
   return (
     <DataContext.Provider value={data}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/project/:id" element={<Project />} />
-          <Route path="*" element={<Error />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </DataContext.Provider>

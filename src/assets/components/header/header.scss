@@ -1,18 +1,10 @@
 @import "/src/assets/colors.scss";
-
 .header {
-  align-items: center;
   display: flex;
   height: 50px;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 596.5px;
-  padding: 0 8px;
-  img {
-    display: block;
-    width: 2rem;
-  }
-  .email {
-    text-decoration: none;
+  justify-content: flex-end;
+  p {
+    color: $high-contrast-text;
+    line-height: 1;
   }
 }

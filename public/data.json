@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "projects": [
+            {
+                "id": 1,
+                "name": "Argent-Bank",
+                "logo": "/images/bank-tree.jpg",
+                "titled": "Argent-Bank, a react application with redux"
+            },
+            {
+                "id": 2,
+                "name": "Kasa",
+                "logo": "/images/zen-flat.jpg",
+                "titled": "Kasa, a React application for a real estate rental company"
+            },
+            {
+                "id": 3,
+                "name": "Sophie Bluel",
+                "logo": "/images/sophie-bluel.jpg",
+                "titled": "Showcase website using JavaScript for photographer Sophie Bluel"
+            }
+        ]
+    }
+]

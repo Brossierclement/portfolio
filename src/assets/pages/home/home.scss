@@ -1,107 +1,37 @@
-@import "../../colors.scss";
-
-.main {
-  margin: 5px auto 45px auto;
-  max-width: 596.5px;
-  padding: 0 8px;
-  h1 {
-    line-height: 1;
-    margin: 16px 0;
-  }
-  p {
-    line-height: 1.2;
-  }
-  .introduce {
-    align-items: start;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    h1,
+@import "/src/assets/colors.scss";
+.home {
+  color: $high-contrast-text;
+  .about {
     p {
-      margin: 0;
-    }
-    .quote,
-    .activities {
-      font-size: 14px;
-    }
-    .quote {
       color: $secondary-text-links;
       font-style: italic;
     }
   }
-  .more {
-    display: flex;
-  }
-  .about {
-    text-align: start;
-    p {
-      color: $secondary-text-links;
-      margin: 0;
-      span {
-        color: $interactive-components;
-        text-transform: uppercase;
-      }
-      a {
-        position: relative;
-        color: #9e89e4;
-        text-decoration: none;
-        transition: all 0.3s;
-        &::after {
-          background: #9e89e4;
-          bottom: -1px;
-          content: "";
-          display: inline-block;
-          height: 1px;
-          left: 0;
-          position: absolute;
-          transition: 0.2s ease-in;
-          width: 0;
-        }
-        &:hover::after {
-          width: 100%;
-        }
-      }
-    }
-  }
-  .projects {
-    text-align: start;
-    .links {
+  .work {
+    .projects {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      .link {
-        align-items: center;
-        border: 1px solid $secondary-text-links;
-        border-radius: 2px;
-        color: $high-contrast-text;
+      gap: 8px;
+      .project {
+        background: $interactive-components;
+        border-radius: 5px;
         display: flex;
-        line-height: 1;
-        justify-content: space-between;
-        padding: 5px 10px;
-        text-decoration: none;
-        transition: all 0.2s ease-in;
-        &:hover,
-        &:focus {
-          border: 1px solid $interactive-components;
-          .arrow {
-            transform: translateX(5px);
-          }
-        }
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+        h3,
         p {
           margin: 0;
         }
-        .arrow {
-          transition: all 0.2s ease-in;
+        p {
+          color: $secondary-text-links;
+        }
+        .p-top {
+          align-items: center;
+          display: flex;
+          gap: 8px;
         }
       }
-    }
-  }
-  .skills {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    p {
-      color: $secondary-text-links;
     }
   }
 }
