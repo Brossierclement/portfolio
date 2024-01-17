@@ -6,19 +6,22 @@
                 "id": 1,
                 "name": "Argent-Bank",
                 "logo": "/images/bank-tree.jpg",
-                "titled": "Argent-Bank, a react application with redux"
+                "titled": "Argent-Bank, a react application with redux",
+                "banner": "/images/bank-tree.jpg"
             },
             {
                 "id": 2,
                 "name": "Kasa",
                 "logo": "/images/zen-flat.jpg",
-                "titled": "Kasa, a React application for a real estate rental company"
+                "titled": "Kasa, a React application for a real estate rental company",
+                "banner": "/images/zen-flat.jpg"
             },
             {
                 "id": 3,
                 "name": "Sophie Bluel",
                 "logo": "/images/sophie-bluel.jpg",
-                "titled": "Showcase website using JavaScript for photographer Sophie Bluel"
+                "titled": "Showcase website using JavaScript for photographer Sophie Bluel",
+                "banner": "/images/sophie-bluel.jpg"
             }
         ]
     },
@@ -27,28 +30,28 @@
         "networks": [
             {
                 "id": 1,
-                "name": "/images/github.svg",
-                "link": "https://github.com/Brossierclement"
+                "logo": "/images/github.svg",
+                "url": "https://github.com/Brossierclement"
             },
             {
                 "id": 2,
-                "name": "/images/linkedin.svg",
-                "link": "https://www.linkedin.com/in/clement-brossier/"
+                "logo": "/images/linkedin.svg",
+                "url": "https://www.linkedin.com/in/clement-brossier/"
             },
             {
                 "id": 3,
-                "name": "/images/twitter.svg",
-                "link": "https://twitter.com/Gulnyr_"
+                "logo": "/images/twitter.svg",
+                "url": "https://twitter.com/Gulnyr_"
             },
             {
                 "id": 4,
-                "name": "/images/twitch.svg",
-                "link": "https://www.twitch.tv/gulnyr_"
+                "logo": "/images/twitch.svg",
+                "url": "https://www.twitch.tv/gulnyr_"
             },
             {
                 "id": 5,
-                "name": "/images/youtube.svg",
-                "link": "https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
+                "logo": "/images/youtube.svg",
+                "url": "https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
             }
         ]
     }

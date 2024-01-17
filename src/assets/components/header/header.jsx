@@ -21,7 +21,14 @@ function Header() {
         </section>
         <nav className="networks">
           {data[1] ? (
-            data[1].networks.map((item) => <Button key={item.id} data={item} />)
+            data[1].networks.map((item) => (
+              <Button
+                key={item.id}
+                data={item}
+                url={item.url}
+                logo={item.logo}
+              />
+            ))
           ) : (
             <p>Error</p>
           )}

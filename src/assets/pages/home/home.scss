@@ -1,3 +1,54 @@
 @import "/src/assets/colors.scss";
 .home {
+  h1,
+  h3,
+  p {
+    margin: 0;
+  }
+  .work {
+    margin: 8px 0;
+    h1 {
+      margin-bottom: 8px;
+    }
+    .projects {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      .project {
+        background: $normal-component;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        img {
+          aspect-ratio: 16/9;
+          border-radius: 5px;
+          object-fit: cover;
+          width: 100%;
+        }
+        .titled {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          padding: 8px;
+          h3 {
+            color: $high-contrast-text;
+          }
+          p {
+            color: $secondary-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    .work {
+      .projects {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
 }

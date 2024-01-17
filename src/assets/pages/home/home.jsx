@@ -2,6 +2,7 @@ import "../home/home.scss";
 import Header from "../../components/header/header";
 import { useContext } from "react";
 import { DataContext } from "../../../App";
+import { Link } from "react-router-dom";
 function Home() {
   const data = useContext(DataContext);
   console.log(data);
@@ -10,21 +11,26 @@ function Home() {
       <Header />
       <main className="home">
         <section className="work">
-          {/* <div className="projects">
+          <h1>Projects</h1>
+          <div className="projects">
             {data[0] ? (
               data[0].projects.map((item) => (
-                <article key={item.id} className="project">
-                  <section className="p-top">
+                <Link
+                  className="project"
+                  key={item.id}
+                  to={`/project/${item.id}`}
+                >
+                  <img src={item.banner} alt="" />
+                  <section className="titled">
                     <h3>{item.name}</h3>
-                    <i className="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+                    <p>{item.titled}</p>
                   </section>
-                  <p>{item.titled}</p>
-                </article>
+                </Link>
               ))
             ) : (
               <p>Error...</p>
             )}
-          </div> */}
+          </div>
         </section>
       </main>
     </>
