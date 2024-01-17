@@ -1,10 +1,51 @@
 @import "/src/assets/colors.scss";
 .header {
   display: flex;
-  height: 50px;
-  justify-content: flex-end;
-  p {
+  flex-direction: column;
+  .job {
+    margin-left: auto;
+  }
+  .about {
     color: $high-contrast-text;
-    line-height: 1;
+    padding: 8px;
+    .introduce {
+      flex: 2;
+      h1,
+      p {
+        margin: 0;
+      }
+      p {
+        margin: 8px 0;
+        span {
+          color: $secondary-text;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .networks {
+      background: $background-component;
+      border-radius: 5px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 8px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    .about {
+      display: flex;
+      gap: 16px;
+      .networks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        a {
+          flex: 1;
+        }
+      }
+    }
   }
 }

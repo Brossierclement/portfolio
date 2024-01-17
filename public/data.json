@@ -21,5 +21,35 @@
                 "titled": "Showcase website using JavaScript for photographer Sophie Bluel"
             }
         ]
+    },
+    {
+        "id": 2,
+        "networks": [
+            {
+                "id": 1,
+                "name": "/images/github.svg",
+                "link": "https://github.com/Brossierclement"
+            },
+            {
+                "id": 2,
+                "name": "/images/linkedin.svg",
+                "link": "https://www.linkedin.com/in/clement-brossier/"
+            },
+            {
+                "id": 3,
+                "name": "/images/twitter.svg",
+                "link": "https://twitter.com/Gulnyr_"
+            },
+            {
+                "id": 4,
+                "name": "/images/twitch.svg",
+                "link": "https://www.twitch.tv/gulnyr_"
+            },
+            {
+                "id": 5,
+                "name": "/images/youtube.svg",
+                "link": "https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
+            }
+        ]
     }
 ]

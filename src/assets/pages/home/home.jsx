@@ -9,13 +9,8 @@ function Home() {
     <>
       <Header />
       <main className="home">
-        <section className="about">
-          <h1>Hey, i'm Clément</h1>
-          <p>"Coding with simplicity, crafting digital magic"</p>
-        </section>
         <section className="work">
-          <h1>Projects</h1>
-          <div className="projects">
+          {/* <div className="projects">
             {data[0] ? (
               data[0].projects.map((item) => (
                 <article key={item.id} className="project">
@@ -29,7 +24,7 @@ function Home() {
             ) : (
               <p>Error...</p>
             )}
-          </div>
+          </div> */}
         </section>
       </main>
     </>

@@ -1,0 +1,21 @@
+@import "/src/assets/colors.scss";
+.button {
+  border: 1px solid rgba($normal-component, 0.2);
+  border-radius: 5px;
+  padding: 8px;
+  &:hover,
+  &:focus {
+    background: $hover-component;
+    .icon {
+      filter: invert(15%) sepia(58%) saturate(438%) hue-rotate(79deg)
+        brightness(97%) contrast(87%);
+    }
+  }
+  .icon {
+    display: block;
+    filter: invert(88%) sepia(1%) saturate(2389%) hue-rotate(81deg)
+      brightness(99%) contrast(107%);
+    height: 20px;
+    width: 20px;
+  }
+}

@@ -11,7 +11,6 @@ function App() {
       .then((result) => setData(result))
       .catch((error) => console.error("Error fetching data", error));
   }, []);
-  // console.log(data);
   return (
     <DataContext.Provider value={data}>
       <BrowserRouter>
