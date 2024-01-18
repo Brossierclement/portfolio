@@ -1,6 +1,15 @@
 @import "/src/assets/colors.scss";
+html {
+  height: -webkit-fill-available;
+}
 body {
   background: $background;
   line-height: 1;
   margin: 0 auto;
+}
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
 }
