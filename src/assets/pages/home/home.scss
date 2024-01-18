@@ -1,12 +1,12 @@
 @import "/src/assets/colors.scss";
 .home {
+  background: palevioletred;
   h1,
   h3,
   p {
     margin: 0;
   }
   .work {
-    margin: 8px 0;
     h1 {
       margin-bottom: 8px;
     }
@@ -32,7 +32,7 @@
           flex-direction: column;
           padding: 8px;
           h3 {
-            color: $high-contrast-text;
+            // color: $high-contrast-text;
           }
           p {
             color: $secondary-text;

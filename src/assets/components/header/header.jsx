@@ -1,39 +1,39 @@
 import "../header/header.scss";
 import { useContext } from "react";
 import { DataContext } from "../../../App";
-import Button from "../button/button";
+import hammer from "../../../../public/images/gavel-solid.svg";
+import menu from "../../../../public/images/bars-solid.svg";
+import vod from "../../../../public/videos/w40k.mp4";
 function Header() {
   const data = useContext(DataContext);
   return (
     <header className="header">
-      <p className="job">Web Developer</p>
-      <div className="about">
-        <section className="introduce">
-          <h1>I'm Clément</h1>
-          <p>
-            a budding web developer diving into the coding world. Armed with the
-            basics of <span>JavaScript</span> and <span>React</span>, I'm
-            concurrently tackling Figma and Redux. Despite facing challenges, I
-            persevere with a passion for learning. Outside of coding, I find
-            inspiration in the Warhammer universe, adding a touch of creativity
-            to my journey.
-          </p>
-        </section>
-        <nav className="networks">
-          {data[1] ? (
-            data[1].networks.map((item) => (
-              <Button
-                key={item.id}
-                data={item}
-                url={item.url}
-                logo={item.logo}
-              />
-            ))
-          ) : (
-            <p>Error</p>
-          )}
-        </nav>
+      <video className="background" src={vod} autoPlay loop muted></video>
+      <div className="topbar">
+        <div className="header-navigation">
+          <img className="hammer" src={hammer} alt="" />
+          <nav className="navigation">
+            <ul>
+              <li>
+                <a href="">Projects</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="header-menu">
+          <img src={menu} alt="" className="menu" />
+        </div>
       </div>
+      <section className="introduce">
+        <h1 className="me">Clément Brossier</h1>
+        <p className="job">Front-End Developer</p>
+      </section>
     </header>
   );
 }

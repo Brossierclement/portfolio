@@ -2,48 +2,98 @@
 .header {
   display: flex;
   flex-direction: column;
-  .job {
-    margin-left: auto;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+  .background {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
   }
-  .about {
-    color: $high-contrast-text;
-    .introduce {
-      flex: 2;
-      h1,
-      p {
-        margin: 0;
+  .topbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    .header-navigation {
+      align-items: center;
+      display: flex;
+      font-weight: bold;
+      gap: 8px;
+      justify-content: space-between;
+      width: 100%;
+      .hammer {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
+          brightness(106%) contrast(97%);
+        height: 24px;
+        width: 24px;
       }
-      p {
-        margin: 8px 0;
-        span {
-          color: $secondary-text;
-          font-weight: bold;
-          text-transform: uppercase;
+      ul {
+        display: flex;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          a {
+            color: $high-contrast-text-light;
+            font-size: 24px;
+            font-weight: 400;
+            text-decoration: none;
+          }
         }
       }
     }
-    .networks {
-      background: $background-component;
-      border-radius: 5px;
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 8px;
+    .header-menu {
+      display: none;
+      .menu {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
+          brightness(106%) contrast(97%);
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 50%;
+    .me,
+    .job {
+      border-left: 2.5px solid $high-contrast-text-light;
+      font-size: 32px;
+      font-weight: bolder;
+      margin: 0;
+    }
+    .me {
+      color: $high-contrast-text-light;
+    }
+    .job {
+      color: $background-component;
     }
   }
 }
 
 @media (min-width: 768px) {
   .header {
-    .about {
-      display: flex;
-      gap: 16px;
-      .networks {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        a {
-          flex: 1;
-        }
+    .introduce {
+      .me,
+      .job {
+        font-size: 64px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    .introduce {
+      .me,
+      .job {
+        font-size: 96px;
       }
     }
   }

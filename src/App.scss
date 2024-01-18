@@ -1,9 +1,6 @@
 @import "/src/assets/colors.scss";
 body {
   background: $background;
-  height: 100vh;
   line-height: 1;
   margin: 0 auto;
-  max-width: 768px;
-  padding: 0 8px;
 }
