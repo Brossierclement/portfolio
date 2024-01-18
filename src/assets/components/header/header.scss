@@ -16,9 +16,9 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    padding: 16px;
     .header-navigation {
-      align-items: center;
+      align-items: flex-start;
       display: flex;
       font-weight: bold;
       gap: 8px;
@@ -27,12 +27,13 @@
       .hammer {
         filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
           brightness(106%) contrast(97%);
-        height: 24px;
-        width: 24px;
+        height: 30px;
+        width: 30px;
       }
       ul {
         display: flex;
-        gap: 8px;
+        flex-direction: column;
+        gap: 16px;
         margin: 0;
         padding: 0;
         li {
@@ -41,7 +42,23 @@
             color: $high-contrast-text-light;
             font-size: 24px;
             font-weight: 400;
+            position: relative;
             text-decoration: none;
+            &::after {
+              background: $high-contrast-text-color;
+              bottom: 0;
+              content: "";
+              height: 2px;
+              left: 0;
+              position: absolute;
+              transform: scaleX(0);
+              transform-origin: top left;
+              transition: transform 0.3s ease;
+              width: 100%;
+            }
+            &:hover::after {
+              transform: scaleX(1);
+            }
           }
         }
       }
@@ -57,22 +74,36 @@
     }
   }
   .introduce {
+    border-left: 2.5px solid $high-contrast-text-light;
     display: flex;
     flex-direction: column;
-    padding: 8px;
+    margin: 0 0 16px 16px;
+    padding: 16px 16px 0 0;
     width: 50%;
     .me,
     .job {
-      border-left: 2.5px solid $high-contrast-text-light;
       font-size: 32px;
       font-weight: bolder;
-      margin: 0;
+      margin: 0 0 0 16px;
     }
     .me {
       color: $high-contrast-text-light;
     }
     .job {
-      color: $background-component;
+      color: $high-contrast-text-color;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .header {
+    .topbar {
+      .header-navigation {
+        align-items: center;
+        ul {
+          flex-direction: row;
+        }
+      }
     }
   }
 }
