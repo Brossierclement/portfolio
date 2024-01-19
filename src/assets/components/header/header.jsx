@@ -15,7 +15,7 @@ function Header() {
           <nav className="navigation">
             <ul>
               <li>
-                <a href="">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <li>
                 <a href="">About</a>

@@ -1,4 +1,7 @@
 @import "/src/assets/colors.scss";
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: $background;
   line-height: 1;
