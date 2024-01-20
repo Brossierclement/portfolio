@@ -1,54 +1,67 @@
 @import "/src/assets/colors.scss";
 .home {
+  margin: 0 auto;
+  max-width: 72rem;
   padding: 0 16px;
   h1,
   h3,
   p {
     margin: 0;
   }
-  .work {
-    h1 {
-      margin-bottom: 8px;
-    }
-    .projects {
-      display: grid;
-      gap: 8px;
-      grid-template-columns: 1fr 1fr;
-      .project {
-        background: $high-contrast-text-color;
+  .projects {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    .project {
+      background: $secondary-backgroud;
+      border: 2px solid $high-contrast-text-light;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      img {
+        aspect-ratio: 16/9;
         border-radius: 5px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .titled {
         display: flex;
         flex-direction: column;
-        text-decoration: none;
-        img {
-          aspect-ratio: 16/9;
-          border-radius: 5px;
-          object-fit: cover;
-          width: 100%;
+        gap: 8px;
+        padding: 8px;
+        h3 {
+          color: $high-contrast-text-dark;
         }
-        .titled {
-          display: flex;
-          flex: 1;
-          flex-direction: column;
-          padding: 8px;
-          h3 {
-            // color: $high-contrast-text;
-          }
-          p {
-            color: $secondary-text;
-          }
+        p {
+          color: $secondary-text;
         }
       }
     }
   }
 }
 
-// @media (min-width: 768px) {
-//   .home {
-//     .work {
-//       .projects {
-//         grid-template-columns: 1fr 1fr 1fr;
-//       }
-//     }
-//   }
-// }
+@media (min-width: 425px) {
+  .home {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .home {
+    .projects {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .home {
+    padding: 0 88px;
+    .projects {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
