@@ -1,55 +1,99 @@
-[
-    {
-        "id": 1,
-        "projects": [
-            {
-                "id": 1,
-                "name": "Argent-Bank",
-                "logo": "/images/bank-tree.jpg",
-                "titled": "Argent-Bank, a react application with redux"
-            },
-            {
-                "id": 2,
-                "name": "Kasa",
-                "logo": "/images/zen-flat.jpg",
-                "titled": "Kasa, a React application for a real estate rental company"
-            },
-            {
-                "id": 3,
-                "name": "Sophie Bluel",
-                "logo": "/images/sophie-bluel.jpg",
-                "titled": "Showcase website using JavaScript for photographer Sophie Bluel"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "networks": [
-            {
-                "id": 1,
-                "logo": "/images/github.svg",
-                "url": "https://github.com/Brossierclement"
-            },
-            {
-                "id": 2,
-                "logo": "/images/linkedin.svg",
-                "url": "https://www.linkedin.com/in/clement-brossier/"
-            },
-            {
-                "id": 3,
-                "logo": "/images/twitter.svg",
-                "url": "https://twitter.com/Gulnyr_"
-            },
-            {
-                "id": 4,
-                "logo": "/images/twitch.svg",
-                "url": "https://www.twitch.tv/gulnyr_"
-            },
-            {
-                "id": 5,
-                "logo": "/images/youtube.svg",
-                "url": "https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
-            }
-        ]
-    }
-]
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "ArgentBank",
+            "logo": "/images/bank-tree.jpg",
+            "titled": "Argent-Bank, a react application with redux"
+        },
+        {
+            "id": 2,
+            "title": "Kasa",
+            "logo": "/images/zen-flat.jpg",
+            "titled": "Kasa, a React application for a real estate rental company"
+        },
+        {
+            "id": 3,
+            "title": "Sophie Bluel",
+            "logo": "/images/sophie-bluel.jpg",
+            "titled": "Showcase website using JavaScript for photographer Sophie Bluel"
+        }
+    ],
+    "proficiencies": [
+        {
+            "id": 1,
+            "title": "Front-end",
+            "content": [
+                {
+                    "id": 1,
+                    "name": "javascript",
+                    "logo": "/images/javascript-fill.svg"
+                },
+                {
+                    "id": 2,
+                    "name": "react",
+                    "logo": "/images/react.svg"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "I'm learning",
+            "content": [
+                {
+                    "id": 1,
+                    "name": "figma",
+                    "logo": "/images/figma-bold.svg"
+                },
+                {
+                    "id": 2,
+                    "name": "redux",
+                    "logo": "/images/redux-fill.svg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Other",
+            "content": [
+                {
+                    "id": 1,
+                    "name": "git & github",
+                    "logo": "/images/github.svg"
+                },
+                {
+                    "id": 2,
+                    "name": "vercel",
+                    "logo": "/images/vercel.svg"
+                }
+            ]
+        }
+    ],
+    "networks": [
+        {
+            "id": 1,
+            "logo": "/images/github.svg",
+            "url": "https://github.com/Brossierclement"
+        },
+        {
+            "id": 2,
+            "logo": "/images/linkedin.svg",
+            "url": "https://www.linkedin.com/in/clement-brossier/"
+        },
+        {
+            "id": 3,
+            "logo": "/images/twitter.svg",
+            "url": "https://twitter.com/Gulnyr_"
+        },
+        {
+            "id": 4,
+            "logo": "/images/twitch.svg",
+            "url": "https://www.twitch.tv/gulnyr_"
+        },
+        {
+            "id": 5,
+            "logo": "/images/youtube.svg",
+            "url": "https://www.youtube.com/channel/UCqr9oNYYGHxnfPVAbNrOqoQ"
+        }
+    ]
+}
