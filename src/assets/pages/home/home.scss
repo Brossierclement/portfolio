@@ -54,7 +54,7 @@
       text-decoration: none;
       img {
         aspect-ratio: 16/9;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         object-fit: cover;
         width: 100%;
       }
@@ -72,6 +72,30 @@
       }
     }
   }
+  .about {
+    display: grid;
+    gap: 8px;
+    overflow: hidden;
+    p {
+      font-size: 20px;
+    }
+    .lore {
+      max-width: 500px;
+      padding: 8px;
+      span {
+        color: $high-contrast-text-color;
+        text-transform: uppercase;
+      }
+    }
+    .degree {
+      padding: 8px;
+    }
+    .silhouette {
+      filter: drop-shadow(30px 10px 4px $high-contrast-text-color);
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
 }
 
 @media (min-width: 425px) {
@@ -82,16 +106,45 @@
     .projects {
       grid-template-columns: 1fr 1fr;
     }
+    .about {
+      grid-template-areas:
+        "a a"
+        "b c";
+      .lore {
+        grid-area: a;
+      }
+      .degree {
+        grid-area: b;
+      }
+      .silhouette {
+        grid-area: c;
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
   .home {
     .proficiencies {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
     .projects {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .about {
+      grid-template-areas:
+        "a c"
+        "b c";
+      .lore {
+        grid-area: a;
+      }
+      .degree {
+        grid-area: b;
+      }
+      .silhouette {
+        grid-area: c;
+        width: 250px;
+      }
     }
   }
 }

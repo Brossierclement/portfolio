@@ -3,6 +3,8 @@ import Header from "../../components/header/header";
 import { useContext } from "react";
 import { DataContext } from "../../../App";
 import { Link } from "react-router-dom";
+import banner from "../../../../public/images/tww3-bretonnia.jpg";
+import silhouette from "../../../../public/images/silhouette.png";
 import Footer from "../../components/footer/footer";
 
 function Home() {
@@ -12,7 +14,7 @@ function Home() {
     <>
       <Header />
       <main className="home">
-        <h1 className="home-title">Proficiency</h1>
+        <h1 className="home-title">Proficiency.</h1>
         <div className="proficiencies">
           {data.proficiencies.map((item, i) => (
             <div key={i} className="proficiency">
@@ -28,7 +30,9 @@ function Home() {
             </div>
           ))}
         </div>
-        <h1 className="home-title">Projects</h1>
+        <h1 id="projects" className="home-title">
+          Projects.
+        </h1>
         <div className="projects">
           {data.projects.map((item) => (
             <Link key={item.id} className="project">
@@ -39,6 +43,33 @@ function Home() {
               </div>
             </Link>
           ))}
+        </div>
+        <h1 id="about" className="home-title">
+          About.
+        </h1>
+        <div className="about">
+          <p className="lore">
+            I am a young French web developer specializing in front-end
+            development. I acquired skills in <span>JavaScript</span> and{" "}
+            <span>React</span> during my training at{" "}
+            <a href="https://openclassrooms.com/fr" target="blank">
+              OpenClassrooms
+            </a>
+            , and i dedicate daily practice to mastering these languages. Beyond
+            coding, i enjoy playing video games and expanding my knowledge of
+            design tools like Figma.
+          </p>
+          <div className="degree">
+            <h3>Degree</h3>
+            <p>Web Integrator Developer / Bac+2 / 2023</p>
+          </div>
+          <img src={silhouette} alt="" className="silhouette" />
+        </div>
+        <h1 id="contact" className="home-title">
+          Contact.
+        </h1>
+        <div className="contact">
+          <p>Soon...</p>
         </div>
       </main>
       <Footer data={data.networks} />
