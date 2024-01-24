@@ -4,11 +4,13 @@ import { DataContext } from "../../../App";
 import hammer from "../../../../public/images/gavel-solid.svg";
 import menu from "../../../../public/images/bars-solid.svg";
 import vod from "../../../../public/videos/w40k.mp4";
+import background from "../../../../public/images/imperium.jpg";
 function Header() {
   const data = useContext(DataContext);
   return (
     <header className="header">
-      <video className="background" src={vod} autoPlay loop muted></video>
+      {/* <video className="background" src={vod} autoPlay loop muted></video> */}
+      <img className="background" src={background} alt="" />
       <div className="topbar">
         <div className="header-navigation">
           <img className="hammer" src={hammer} alt="" />

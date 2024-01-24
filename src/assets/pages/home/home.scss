@@ -1,7 +1,7 @@
 @import "/src/assets/colors.scss";
 .home {
   margin: 0 auto;
-  max-width: 72rem;
+  max-width: 1024px;
   padding: 0 16px;
   h1,
   h3,
@@ -9,12 +9,14 @@
     margin: 0;
   }
   .home-title {
-    margin: 32px 0;
+    margin: 32px auto;
+    max-width: 1024px;
   }
   .proficiencies {
     display: grid;
     gap: 16px;
     grid-template-columns: 1fr;
+    margin: 0 auto;
     .proficiency {
       align-items: center;
       background: $secondary-backgroud;
@@ -45,6 +47,7 @@
     display: grid;
     gap: 8px;
     grid-template-columns: 1fr;
+    margin: 0 auto;
     .project {
       background: $secondary-backgroud;
       border: 2px solid $high-contrast-text-light;
@@ -73,27 +76,72 @@
     }
   }
   .about {
+    border-bottom: 2px solid $high-contrast-text-color;
     display: grid;
     gap: 8px;
-    overflow: hidden;
+    margin: 0 auto;
     p {
       font-size: 20px;
     }
     .lore {
       max-width: 500px;
-      padding: 8px;
       span {
         color: $high-contrast-text-color;
         text-transform: uppercase;
       }
     }
-    .degree {
-      padding: 8px;
+    .more {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h3 {
+        margin-bottom: 8px;
+      }
+      .resume {
+        .btn-resume {
+          background: $high-contrast-text-dark;
+          border: none;
+          border-radius: 2.5px;
+          color: $high-contrast-text-light;
+          cursor: pointer;
+          font-size: 16px;
+          height: 50px;
+          overflow: hidden;
+          position: relative;
+          transition: 0.3s ease-in-out;
+          width: 150px;
+          z-index: 0;
+          &::before {
+            background: $high-contrast-text-color;
+            border-radius: 50% 150% 0 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 50px;
+            transition: 0.3s ease-in-out;
+            width: 100%;
+            z-index: -1;
+          }
+          &:hover::before {
+            border-radius: 0;
+            top: 0;
+          }
+          &:hover {
+            color: $high-contrast-text-dark;
+          }
+        }
+      }
     }
     .silhouette {
-      filter: drop-shadow(30px 10px 4px $high-contrast-text-color);
+      filter: drop-shadow(2px 0 0 $high-contrast-text-color)
+        drop-shadow(0 2px 0 $high-contrast-text-color)
+        drop-shadow(-2px 0 0 $high-contrast-text-color)
+        drop-shadow(0 -2px 0 $high-contrast-text-color);
       margin: 0 auto;
-      width: 200px;
+      height: 100%;
+      object-fit: cover;
+      width: 250px;
     }
   }
 }
@@ -106,9 +154,15 @@
     .projects {
       grid-template-columns: 1fr 1fr;
     }
+  }
+}
+
+@media (min-width: 550px) {
+  .home {
     .about {
+      border-right: 2px solid $high-contrast-text-color;
       grid-template-areas:
-        "a a"
+        "a c"
         "b c";
       .lore {
         grid-area: a;
@@ -132,18 +186,8 @@
       grid-template-columns: repeat(3, 1fr);
     }
     .about {
-      grid-template-areas:
-        "a c"
-        "b c";
-      .lore {
-        grid-area: a;
-      }
-      .degree {
-        grid-area: b;
-      }
       .silhouette {
-        grid-area: c;
-        width: 250px;
+        width: 100%;
       }
     }
   }
@@ -151,6 +195,9 @@
 
 @media (min-width: 1024px) {
   .home {
-    padding: 0 88px;
+    .about {
+      max-height: 400px;
+      overflow: hidden;
+    }
   }
 }

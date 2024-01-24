@@ -3,8 +3,8 @@ import Header from "../../components/header/header";
 import { useContext } from "react";
 import { DataContext } from "../../../App";
 import { Link } from "react-router-dom";
-import banner from "../../../../public/images/tww3-bretonnia.jpg";
-import silhouette from "../../../../public/images/silhouette.png";
+import silhouette from "../../../../public/images/me.png";
+import terminal from "../../../../public/images/terminal.jpg";
 import Footer from "../../components/footer/footer";
 
 function Home() {
@@ -55,13 +55,18 @@ function Home() {
             <a href="https://openclassrooms.com/fr" target="blank">
               OpenClassrooms
             </a>
-            , and i dedicate daily practice to mastering these languages. Beyond
-            coding, i enjoy playing video games and expanding my knowledge of
-            design tools like Figma.
+            , and i dedicate daily practice to mastering these languages.
+            Besides coding, i enjoy playing video games and expanding my
+            knowledge of design tools like Figma.
           </p>
-          <div className="degree">
-            <h3>Degree</h3>
-            <p>Web Integrator Developer / Bac+2 / 2023</p>
+          <div className="more">
+            <section className="degree">
+              <h3>Degree :</h3>
+              <p>Web Integrator Developer / Bac+2 / 2023</p>
+            </section>
+            <section className="resume">
+              <button className="btn-resume left">Curriculum vitae</button>
+            </section>
           </div>
           <img src={silhouette} alt="" className="silhouette" />
         </div>

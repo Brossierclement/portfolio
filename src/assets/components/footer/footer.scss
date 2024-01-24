@@ -11,6 +11,7 @@
     display: flex;
     gap: 8px;
     .social {
+      border-radius: 5px;
       height: 25px;
       padding: 8px;
       transition: 0.2s ease-in;
@@ -18,7 +19,6 @@
       &:hover,
       &:focus {
         background: $high-contrast-text-dark;
-        border-radius: 5px;
         img {
           filter: invert(82%) sepia(20%) saturate(3773%) hue-rotate(343deg)
             brightness(102%) contrast(103%);
