@@ -1,4 +1,64 @@
 .project {
   margin: 0 auto;
   max-width: 1024px;
+  padding: 0 16px;
+  .project-title {
+    margin: 32px auto;
+    max-width: 1024px;
+  }
+  .introduction-container {
+    display: grid;
+    gap: 8px;
+    p {
+      margin: 0;
+    }
+    .navigation {
+      display: flex;
+      gap: 8px;
+    }
+    .infos {
+      display: grid;
+      gap: 8px;
+      .tech {
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+  .images {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr;
+    margin: 16px 0;
+    position: relative;
+    .image {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .project {
+    .introduction-container {
+      grid-template-columns: 2fr 1fr;
+      .introduction {
+        grid-row: 1 / 3;
+      }
+      .navigation {
+        flex: 1;
+        flex-direction: column;
+        grid-column: 2;
+      }
+    }
+    .images {
+      grid-template-columns: repeat(2, 1fr);
+      transition: grid-column 0.3s ease-in;
+      .active {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+      }
+    }
+  }
 }
