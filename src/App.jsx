@@ -2,6 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/pages/home/home";
 import { createContext, useEffect, useState } from "react";
+import Project from "./assets/pages/project/project";
 export const DataContext = createContext();
 function App() {
   const [data, setData] = useState(null);
@@ -28,6 +29,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/project/:id" element={<Project />} />
             </Routes>
           </BrowserRouter>
         </DataContext.Provider>

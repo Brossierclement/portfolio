@@ -4,12 +4,11 @@ import { useContext } from "react";
 import { DataContext } from "../../../App";
 import { Link } from "react-router-dom";
 import silhouette from "../../../../public/images/me.png";
-import terminal from "../../../../public/images/terminal.jpg";
+import Btn from "../../components/btn/btn";
 import Footer from "../../components/footer/footer";
 
 function Home() {
   const data = useContext(DataContext);
-  // console.log(data.proficiencies[0].content);
   return (
     <>
       <Header />
@@ -35,7 +34,7 @@ function Home() {
         </h1>
         <div className="projects">
           {data.projects.map((item) => (
-            <Link key={item.id} className="project">
+            <Link to={`/project/${item.id}`} key={item.id} className="project">
               <img src={item.logo} alt="" />
               <div className="titled">
                 <h3>{item.title}</h3>
@@ -53,10 +52,10 @@ function Home() {
             development. I acquired skills in <span>JavaScript</span> and{" "}
             <span>React</span> during my training at{" "}
             <a href="https://openclassrooms.com/fr" target="blank">
-              OpenClassrooms
+              OpenClassrooms.
             </a>
-            , and i dedicate daily practice to mastering these languages.
-            Besides coding, i enjoy playing video games and expanding my
+            <br />I am spending most of my time mastering these languages,
+            besides coding I enjoy playing video games and expanding my
             knowledge of design tools like Figma.
           </p>
           <div className="more">
@@ -64,9 +63,7 @@ function Home() {
               <h3>Degree :</h3>
               <p>Web Integrator Developer / Bac+2 / 2023</p>
             </section>
-            <section className="resume">
-              <button className="btn-resume left">Curriculum vitae</button>
-            </section>
+            <Btn name={"Curriculum vitae"} url={"https://www.youtube.com/"} />
           </div>
           <img src={silhouette} alt="" className="silhouette" />
         </div>
