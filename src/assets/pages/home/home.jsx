@@ -34,7 +34,11 @@ function Home() {
         </h1>
         <div className="projects">
           {data.projects.map((item) => (
-            <Link to={`/project/${item.id}`} key={item.id} className="project">
+            <Link
+              to={`/project/${item.id}`}
+              key={item.id}
+              className="project-card"
+            >
               <img src={item.logo} alt="" />
               <div className="titled">
                 <h3>{item.title}</h3>

@@ -1,31 +1,40 @@
 import "../header/header.scss";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { DataContext } from "../../../App";
 import hammer from "../../../../public/images/gavel-solid.svg";
 import menu from "../../../../public/images/bars-solid.svg";
-import vod from "../../../../public/videos/w40k.mp4";
-import background from "../../../../public/images/imperium.jpg";
+import { Link } from "react-router-dom";
 function Header() {
   const data = useContext(DataContext);
+  const [isActive, setIsActive] = useState();
   return (
     <header className="header">
-      {/* <video className="background" src={vod} autoPlay loop muted></video> */}
-      <img className="background" src={background} alt="" />
       <div className="topbar">
         <div className="header-navigation">
-          <img className="hammer" src={hammer} alt="" />
-          <nav className="navigation">
-            <ul>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="">Contact</a>
-              </li>
-            </ul>
+          <Link to={"/"}>
+            <img className="hammer" src={hammer} alt="" />
+          </Link>
+          <nav className="menu">
+            <button onClick={() => setIsActive(!isActive)} className="menu-btn">
+              <img src={menu} alt="" />
+            </button>
+            <div
+              className={`menu-content ${
+                isActive ? "menu-content-active" : ""
+              }`}
+            >
+              <ul>
+                <li>
+                  <a href="#projects">Projects</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="">Contact</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
         <div className="header-menu">

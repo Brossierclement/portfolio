@@ -1,21 +1,27 @@
 @import "/src/assets/colors.scss";
 .header {
+  background: center top / cover url(/public/images/imperium.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto 32px auto;
   max-width: 1024px;
-  // min-height: 100svh;
+  min-height: 300px;
   position: relative;
-  .background {
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
+  // &::before {
+  //   background: rgba($high-contrast-text-dark, 0.5);
+  //   content: "";
+  //   inset: 0;
+  //   position: absolute;
+  // }
+  // .background {
+  //   height: 100%;
+  //   object-fit: cover;
+  //   position: absolute;
+  //   width: 100%;
+  //   z-index: -1;
+  // }
   .topbar {
-    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 16px;
@@ -28,40 +34,91 @@
       width: 100%;
       .hammer {
         filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(41deg)
-          brightness(106%) contrast(97%);
-        height: 30px;
-        width: 30px;
+          brightness(106%) contrast(97%)
+          drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+        height: 45px;
+        width: 45px;
       }
-      ul {
+      .menu {
+        align-items: flex-end;
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        margin: 0;
-        padding: 0;
-        li {
-          list-style: none;
-          a {
-            color: $high-contrast-text-light;
-            font-size: 24px;
-            font-weight: 400;
+        position: relative;
+        .menu-btn {
+          cursor: pointer;
+          position: relative;
+          width: auto;
+          border-radius: 5px;
+          border: solid 1px grey;
+          background: $high-contrast-text-light;
+          padding: 8px 12px;
+
+          -webkit-transition: all 0.1s;
+          -moz-transition: all 0.1s;
+          transition: all 0.1s;
+
+          -webkit-box-shadow: 0px 6px 0px $tertiary-background;
+          -moz-box-shadow: 0px 6px 0px $tertiary-background;
+          box-shadow: 0px 4px 3px lightgray;
+          &:active {
+            -webkit-box-shadow: 0px 2px 0px $tertiary-background;
+            -moz-box-shadow: 0px 2px 0px $tertiary-background;
+            box-shadow: 0px 2px 0px lightgray;
             position: relative;
-            text-decoration: none;
-            &::after {
-              background: $high-contrast-text-color;
-              bottom: 0;
-              content: "";
-              height: 2px;
-              left: 0;
-              position: absolute;
-              transform: scaleX(0);
-              transform-origin: top left;
-              transition: transform 0.2s ease;
-              width: 100%;
-            }
-            &:hover::after {
-              transform: scaleX(1);
+            top: 4px;
+          }
+          img {
+            filter: invert(11%) sepia(0%) saturate(0%) hue-rotate(98deg)
+              brightness(95%) contrast(92%);
+            height: 100%;
+            display: block;
+            width: 100%;
+          }
+        }
+        .menu-content {
+          overflow: hidden;
+          padding: 8px 0;
+          transition: 0.3s ease-in;
+          width: 0;
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            li {
+              display: inline-block;
+              list-style: none;
+              // padding: 0 8px;
+              a {
+                color: $high-contrast-text-light;
+                font-size: 24px;
+                position: relative;
+                text-decoration: none;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                &::after {
+                  background: $high-contrast-text-color;
+                  bottom: 0;
+                  content: "";
+                  height: 2px;
+                  left: 0;
+                  position: absolute;
+                  transform: scaleX(0);
+                  transform-origin: top left;
+                  transition: transform 0.2s ease;
+                  width: 100%;
+                }
+                &:hover::after,
+                &:focus::after {
+                  transform: scaleX(1);
+                }
+              }
             }
           }
+        }
+        .menu-content-active {
+          transition: 0.3s ease-in;
+          width: 100%;
         }
       }
     }
@@ -82,31 +139,25 @@
     margin: 0 0 16px 16px;
     padding: 16px 16px 0 0;
     width: 50%;
+    z-index: 1;
     .me,
     .job {
-      font-size: 32px;
-      font-weight: bolder;
+      font-size: 24px;
       margin: 0 0 0 16px;
     }
     .me {
       color: $high-contrast-text-light;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .job {
       color: $high-contrast-text-color;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   }
 }
 
 @media (min-width: 425px) {
   .header {
-    .topbar {
-      .header-navigation {
-        align-items: center;
-        ul {
-          flex-direction: row;
-        }
-      }
-    }
   }
 }
 
@@ -115,7 +166,7 @@
     .introduce {
       .me,
       .job {
-        font-size: 64px;
+        font-size: 32px;
       }
     }
   }
@@ -126,7 +177,7 @@
     .introduce {
       .me,
       .job {
-        font-size: 96px;
+        font-size: 40px;
       }
     }
   }
