@@ -4,11 +4,12 @@
             "id": 1,
             "title": "ArgentBank",
             "logo": "/images/bank-tree.jpg",
-            "titled": "Argent-Bank, a react application with redux",
+            "titled": "A react application with redux",
             "introduction": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas voluptatem ad error reprehenderit rem eveniet accusantium quae id. Placeat nulla id aspernatur dignissimos repellendus magni iusto obcaecati? Quam, maxime amet.",
             "url": "https://github.com/Brossierclement",
             "images": ["/images/ab1.jpg", "/images/ab2.jpg", "/images/ab3.jpg"],
             "date": "25 Octobre 2023",
+            "type": "React project",
             "category": "Projet formation",
             "technology": ["React", "Redux"]
         },
@@ -16,11 +17,12 @@
             "id": 2,
             "title": "Kasa",
             "logo": "/images/zen-flat.jpg",
-            "titled": "Kasa, a React application for a real estate rental company",
+            "titled": "A React application for a real estate rental company",
             "introduction": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas voluptatem ad error reprehenderit rem eveniet accusantium quae id. Placeat nulla id aspernatur dignissimos repellendus magni iusto obcaecati? Quam, maxime amet.",
             "url": "https://github.com/Brossierclement",
             "images": ["/images/k1.jpg", "/images/k2.jpg", "/images/k3.jpg"],
             "date": "25 Octobre 2023",
+            "type": "React project",
             "category": "Projet formation",
             "technology": ["React", "Redux"]
         },
@@ -33,6 +35,7 @@
             "url": "https://github.com/Brossierclement",
             "images": ["/images/sb1.jpg", "/images/sb2.jpg", "/images/sb3.jpg"],
             "date": "25 Octobre 2023",
+            "type": "Javascript project",
             "category": "Projet formation",
             "technology": ["React", "Redux"]
         }

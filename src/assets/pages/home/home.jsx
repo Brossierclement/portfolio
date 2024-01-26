@@ -11,7 +11,7 @@ function Home() {
   const data = useContext(DataContext);
   return (
     <>
-      <Header />
+      <Header title={"Clément Brossier"} titled={"Front-end Developer"} />
       <main className="home">
         <h1 className="home-title">Proficiency.</h1>
         <div className="proficiencies">
@@ -22,7 +22,7 @@ function Home() {
                 {data.proficiencies[i].content.map((item) => (
                   <li key={item.id}>
                     <img src={item.logo} alt="" />
-                    <p>{item.name}</p>
+                    <p className="tech">{item.name}</p>
                   </li>
                 ))}
               </ul>

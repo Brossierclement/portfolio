@@ -8,12 +8,12 @@
   max-width: 1024px;
   min-height: 300px;
   position: relative;
-  // &::before {
-  //   background: rgba($high-contrast-text-dark, 0.5);
-  //   content: "";
-  //   inset: 0;
-  //   position: absolute;
-  // }
+  &::before {
+    background: rgba($high-contrast-text-dark, 0.5);
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
   // .background {
   //   height: 100%;
   //   object-fit: cover;

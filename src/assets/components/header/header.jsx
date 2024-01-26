@@ -4,7 +4,7 @@ import { DataContext } from "../../../App";
 import hammer from "../../../../public/images/gavel-solid.svg";
 import menu from "../../../../public/images/bars-solid.svg";
 import { Link } from "react-router-dom";
-function Header() {
+function Header({ title, titled }) {
   const data = useContext(DataContext);
   const [isActive, setIsActive] = useState();
   return (
@@ -31,7 +31,7 @@ function Header() {
                   <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -42,8 +42,8 @@ function Header() {
         </div>
       </div>
       <section className="introduce">
-        <h1 className="me">Clément Brossier</h1>
-        <p className="job">Front-End Developer</p>
+        <h1 className="me">{title}</h1>
+        <p className="job">{titled}</p>
       </section>
     </header>
   );

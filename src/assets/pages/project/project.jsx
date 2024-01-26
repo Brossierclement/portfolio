@@ -28,9 +28,10 @@ function Project() {
   };
   return (
     <>
-      <Header />
+      <Header title={currentData.title} titled={currentData.type} />
       <main className="project">
-        <h1 className="project-title">{currentData.title}</h1>
+        {/* <h1 className="project-title">{currentData.title}</h1> */}
+        <h1 className="project-title">Description.</h1>
         <div className="introduction-container">
           <p className="introduction">{currentData.introduction}</p>
           <div className="infos">
