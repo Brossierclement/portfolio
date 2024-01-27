@@ -67,7 +67,10 @@ function Home() {
               <h3>Degree :</h3>
               <p>Web Integrator Developer / Bac+2 / 2023</p>
             </section>
-            <Btn name={"Curriculum vitae"} url={"https://www.youtube.com/"} />
+            <Btn
+              name={"Curriculum vitae"}
+              url={"/images/CV_Brossier-Clément.pdf"}
+            />
           </div>
           <img src={silhouette} alt="" className="silhouette" />
         </div>

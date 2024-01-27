@@ -3,10 +3,13 @@ import { useContext, useState } from "react";
 import { DataContext } from "../../../App";
 import hammer from "../../../../public/images/gavel-solid.svg";
 import menu from "../../../../public/images/bars-solid.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useParams } from "react-router";
 function Header({ title, titled }) {
   const data = useContext(DataContext);
   const [isActive, setIsActive] = useState();
+  console.log(data.projects.map((item) => item.id));
+  const { id } = useParams();
   return (
     <header className="header">
       <div className="topbar">
@@ -23,17 +26,30 @@ function Header({ title, titled }) {
                 isActive ? "menu-content-active" : ""
               }`}
             >
-              <ul>
-                <li>
-                  <a href="#projects">Projects</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#contact">Contact</a>
-                </li>
-              </ul>
+              {location.pathname == "/" ? (
+                <ul>
+                  <li>
+                    <a href="#projects">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              ) : location.pathname == `/project/${id}` ? (
+                <ul>
+                  <li>
+                    <a href="#projects">Description</a>
+                  </li>
+                  <li>
+                    <a href="#about">Illustrations</a>
+                  </li>
+                </ul>
+              ) : (
+                <p>Error...</p>
+              )}
             </div>
           </nav>
         </div>
