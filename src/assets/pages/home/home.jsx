@@ -70,7 +70,7 @@ function Home() {
             </section>
             <Btn
               name={"Curriculum vitae"}
-              url={"/images/CV_Brossier-Clément.pdf"}
+              url={"/images/cv clement brossier.pdf"}
             />
           </div>
           <img src={silhouette} alt="" className="silhouette" />
