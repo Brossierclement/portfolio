@@ -80,6 +80,12 @@ function Home() {
         </h1>
         <div className="contact">
           <p>Bientôt...</p>
+          <p className="email">
+            En attendant vous pouvez me contacter via mon email :{" "}
+            <a href="mailto: brossier.clement@proton.me">
+              brossier.clement@proton.me
+            </a>
+          </p>
         </div>
       </main>
       <Footer data={data.networks} />

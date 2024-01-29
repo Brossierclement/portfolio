@@ -32,7 +32,7 @@ function Header({ title, titled }) {
                     <a href="#projects">Projets</a>
                   </li>
                   <li>
-                    <a href="#about">A propos</a>
+                    <a href="#about">À propos</a>
                   </li>
                   <li>
                     <a href="#contact">Contact</a>
