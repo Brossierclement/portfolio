@@ -37,7 +37,11 @@
           brightness(106%) contrast(97%)
           drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
         height: 45px;
+        transition: 0.2s ease-in-out;
         width: 45px;
+        &:hover {
+          transform: scale();
+        }
       }
       .menu {
         align-items: flex-end;
@@ -81,6 +85,7 @@
           transition: 0.3s ease-in;
           width: 0;
           ul {
+            border-right: 1px solid $high-contrast-text-light;
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -89,7 +94,9 @@
             li {
               display: inline-block;
               list-style: none;
-              // padding: 0 8px;
+              text-align: end;
+              padding: 0 8px;
+              width: 150px;
               a {
                 color: $high-contrast-text-light;
                 font-size: 24px;

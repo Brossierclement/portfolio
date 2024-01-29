@@ -25,12 +25,15 @@
       width: 100%;
       z-index: -1;
     }
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       border-radius: 0;
       top: 0;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       color: $high-contrast-text-dark;
+      transform: scale(0.9);
     }
   }
 }

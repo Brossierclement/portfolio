@@ -14,7 +14,6 @@ function Project() {
   const handleClick = (index) => {
     const newImageStates = [...imageStates]; // Créez une copie de l'état actuel
     newImageStates[index] = !newImageStates[index]; // Inversez l'état de l'image cliquée
-
     // Si l'image est réactivée, désactivez toutes les autres images
     if (newImageStates[index]) {
       for (let i = 0; i < newImageStates.length; i++) {
@@ -23,14 +22,12 @@ function Project() {
         }
       }
     }
-
     setImageStates(newImageStates); // Mettez à jour l'état avec le nouveau tableau
   };
   return (
     <>
       <Header title={currentData.title} titled={currentData.type} />
       <main className="project">
-        {/* <h1 className="project-title">{currentData.title}</h1> */}
         <h1 className="project-title">Description.</h1>
         <div className="introduction-container">
           <p className="introduction">{currentData.introduction}</p>

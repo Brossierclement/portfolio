@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "../../../App";
 import hammer from "../../../../public/images/gavel-solid.svg";
 import menu from "../../../../public/images/bars-solid.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 function Header({ title, titled }) {
   const data = useContext(DataContext);
@@ -29,10 +29,10 @@ function Header({ title, titled }) {
               {location.pathname == "/" ? (
                 <ul>
                   <li>
-                    <a href="#projects">Projects</a>
+                    <a href="#projects">Projets</a>
                   </li>
                   <li>
-                    <a href="#about">About</a>
+                    <a href="#about">A propos</a>
                   </li>
                   <li>
                     <a href="#contact">Contact</a>

@@ -11,9 +11,9 @@ function Home() {
   const data = useContext(DataContext);
   return (
     <>
-      <Header title={"Clément Brossier"} titled={"Front-end Developer"} />
+      <Header title={"Clément Brossier"} titled={"Développeur front-end"} />
       <main className="home">
-        <h1 className="home-title">Proficiency.</h1>
+        <h1 className="home-title">Compétences.</h1>
         <div className="proficiencies">
           {data.proficiencies.map((item, i) => (
             <div key={i} className="proficiency">
@@ -29,8 +29,8 @@ function Home() {
             </div>
           ))}
         </div>
-        <h1 id="projects" className="home-title">
-          Projects.
+        <h1 id="projets" className="home-title">
+          Projets.
         </h1>
         <div className="projects">
           {data.projects.map((item) => (
@@ -48,24 +48,25 @@ function Home() {
           ))}
         </div>
         <h1 id="about" className="home-title">
-          About.
+          À propos.
         </h1>
         <div className="about">
           <p className="lore">
-            I am a young French web developer specializing in front-end
-            development. I acquired skills in <span>JavaScript</span> and{" "}
-            <span>React</span> during my training at{" "}
+            Je suis un jeune développeur Français spécialisé dans le front-end.
+            J'ai acquéri des compétences en <span>JavaScript</span> et{" "}
+            <span>React</span> durant la formation que j'ai fait à{" "}
             <a href="https://openclassrooms.com/fr" target="blank">
               OpenClassrooms.
             </a>
-            <br />I am spending most of my time mastering these languages,
-            besides coding I enjoy playing video games and expanding my
-            knowledge of design tools like Figma.
+            <br />
+            Je consacre régulièrement du temps a la maîtrise de ces deux
+            langages, a coté de cela j'aime jouer aux jeux vidéo et apprendre
+            comment fonctionne Figma.
           </p>
           <div className="more">
             <section className="degree">
-              <h3>Degree :</h3>
-              <p>Web Integrator Developer / Bac+2 / 2023</p>
+              <h3>Dîplomes :</h3>
+              <p>Intégrateur Web / Bac+2 / 2023</p>
             </section>
             <Btn
               name={"Curriculum vitae"}
@@ -78,7 +79,7 @@ function Home() {
           Contact.
         </h1>
         <div className="contact">
-          <p>Soon...</p>
+          <p>Bientôt...</p>
         </div>
       </main>
       <Footer data={data.networks} />
